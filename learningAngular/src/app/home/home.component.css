@@ -1,0 +1,18 @@
+.conteinerHome {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.itemHome {
+  background-color: aqua;
+  margin-top: 200px;
+  margin-left: 30px;
+  width: 300px;
+  flex: 50%;
+}
+
+.main-section-home {
+  min-height: 125vh;
+  display: block;
+}
