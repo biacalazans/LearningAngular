@@ -1,18 +1,7 @@
-.conteinerHome {
-  display: inline-flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.itemHome {
-  background-color: aqua;
-  margin-top: 200px;
-  margin-left: 30px;
-  width: 300px;
-  flex: 50%;
-}
-
-.main-section-home {
-  min-height: 125vh;
-  display: block;
+.containerHome {
+  position: relative;
+  background-color: #bebebe6c;
+  padding: 20px;
+  border-radius: 6px;
+  color: rgb(108, 107, 110);
 }

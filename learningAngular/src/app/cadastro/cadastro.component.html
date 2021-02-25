@@ -1,0 +1,63 @@
+<div class="containerCadastro">
+  <h1>Cadastre-se</h1>
+
+  <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+    <h5 *ngIf="success">Sucesso</h5>
+
+    <label>
+      Nome:
+      <input type="text" formControlName="name" />
+      <div *ngIf="submitted && cadastroForm.controls.name.errors" class="error">
+        <div *ngIf="cadastroForm.controls.name.errors.required">
+          Campo obrigatório
+        </div>
+      </div>
+    </label>
+
+    <label>
+      Sobrenome:
+      <input type="text" formControlName="lastName" />
+      <div *ngIf="submitted && cadastroForm.controls.name.errors" class="error">
+        <div *ngIf="cadastroForm.controls.name.errors.required">
+          Campo obrigatório
+        </div>
+      </div>
+    </label>
+
+    <label>
+      E-mail:
+      <input type="text" formControlName="email" />
+      <div *ngIf="submitted && cadastroForm.controls.name.errors" class="error">
+        <div *ngIf="cadastroForm.controls.name.errors.required">
+          Campo obrigatório
+        </div>
+      </div>
+    </label>
+
+    <label>
+      Senha:
+      <input type="password" formControlName="password" />
+      <div *ngIf="submitted && cadastroForm.controls.name.errors" class="error">
+        <div *ngIf="cadastroForm.controls.name.errors.required">
+          Campo obrigatório
+        </div>
+      </div>
+    </label>
+
+    <input type="submit" value="salvar" class="cta" />
+  </form>
+
+  <div *ngif="submitted" class="results">
+    <strong>Nome:</strong>
+    <span>{{ cadastroForm.controls.name.value }}</span>
+
+    <strong>Sobrenome:</strong>
+    <span>{{ cadastroForm.controls.lastName.value }}</span>
+
+    <strong>E-mail:</strong>
+    <span>{{ cadastroForm.controls.email.value }}</span>
+
+    <strong>Senha:</strong>
+    <span>{{ cadastroForm.controls.password.value }}</span>
+  </div>
+</div>
